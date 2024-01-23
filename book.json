@@ -1,0 +1,35 @@
+
+{
+  "title": "Abovegem Public APIs", 
+  "author": "AG Team", 
+  "plugins": [
+    "splitter", 
+    "-search", 
+    "-livereload", 
+    "search-plus",
+    "tbfed-pagefooter", 
+    "expandable-chapters-small", 
+    "chapter-fold", 
+    "code", 
+    "auto-scroll-table", 
+    "hide-element", 
+    "ancre-navigation", 
+    "mermaid-gb3", 
+    "chart", 
+    "summary", 
+    "alerts"
+  ], 
+  "pluginsConfig": {
+    "theme-default": {
+      "showLevel": true
+    }, 
+    "tbfed-pagefooter": {
+      "copyright": "Copyright &copy AboveGEM LLC, 2024", 
+      "modify_label": "Last modify since: ", 
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    }, 
+    "hide-element": {
+      "elements": [ ".gitbook-link" ]
+    }
+  }
+}
