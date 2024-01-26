@@ -3,7 +3,7 @@
 ## Post Authentication Token
 
 ```bash
-curl "http://api-demo.abovegem.com:11442/api/v3/admin/authentications/token" \
+curl "https://api-test.abovegem.com:5443/api/v3/admin/authentications/token" \
   -H 'content-type: application/json' \
   -H 'x-company-code: BUU' \
   -H 'x-client-id: test_client_id_buu_1' \
