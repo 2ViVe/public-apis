@@ -28,10 +28,10 @@ HTTP Headers
 
 Body
 
-| field    | value        | required | comment      |
-| -------- | ------------ | -------- | ------------ |
-| user     | testapiadmin | Required | the login    |
-| password | Abc123456    | Required | the password |
+| field    | type   | value        | required | comment      |
+| -------- | ------ | ------------ | -------- | ------------ |
+| user     | string | testapiadmin | Required | the login    |
+| password | string | Abc123456    | Required | the password |
 
 Response
 

@@ -3,7 +3,7 @@
 ## Get Orders
 
 ```bash
-curl -x 127.0.0.1:8888 -k "http://api-demo.abovegem.com:11442/api/v3/admin/orders?limit=10&offset=0" \
+curl "http://api-demo.abovegem.com:11442/api/v3/admin/orders?limit=10&offset=0" \
   -H 'content-type: application/json' \
   -H 'x-company-code: BUU' \
   -H 'x-client-id: test_client_id_buu_1' \
@@ -11,18 +11,28 @@ curl -x 127.0.0.1:8888 -k "http://api-demo.abovegem.com:11442/api/v3/admin/order
   -H 'x-authentication-token: MTQ1MTk0MzYwMTo6MzI5MDA2Nzo6dGVzdGFwaWFkbWluOjpzb21lLXRlc3QtZGV2aWNlLXV1aWQtaGVyZTo6MTcwNjAxNzI5OTAzNzo6dGVzdF9jbGllbnRfaWRfYnV1XzE6OkJVVTo6TTo6NzYzdXpTZ0JjNUJGdHB0OHBzV01mRDVCNUxFbGlNSkFlb3Zlb0tla09iVT0'
 ```
 
+headers
+
+| header                 | value                   | required | comment                               |
+| ---------------------- | ----------------------- | -------- | ------------------------------------- |
+| content-type           | application/json        | Required | define api communicate as json syntax |
+| x-company-code         | BUU                     | Required | api company code                      |
+| x-client-id            | test_client_id_buu_1    | Required | client id from authentication         |
+| x-request-id           | some unique request id  | Optional | request id for log trace              |
+| x-authentication-token | the base64 token string | Required | the authorized token                  |
+
 Params
 
-| param             | value                           | required | comment                                                                                      |
-| ----------------- | ------------------------------- | -------- | -------------------------------------------------------------------------------------------- |
-| limit             | 1~100                           | Required | used for pagenation. donot try to fetch hudge orders!                                        |
-| offset            | 0~n                             | Required | used for pagenation offset                                                                   |
-| sku               | BASIC_KIT                       | Optional | search specfield product orders via single sku                                               |
-| sponsorId         | 1435250601                      | Optional | search concrete sponsors orders. cannot search with external distributor id (TSA number etc) |
-| productName       | BUSINESS+KIT                    | Optional | search specfield product orders via single product name                                      |
-| orderDateStart    | 2024-01-01T00%3A00%3A00-06%3A00 | Optional | query orders by date range                                                                   |
-| orderDateEnd      | 2024-01-02T23%3A59%3A59-06%3A00 | Optional | query orders by date range                                                                   |
-| transactionNumber | 9071832983                      | Optional | search order by payment transaction ID                                                       |
+| param             | type               | value                           | required | comment                                                                                      |
+| ----------------- | ------------------ | ------------------------------- | -------- | -------------------------------------------------------------------------------------------- |
+| limit             | integer            | 1~100                           | Required | used for pagenation. donot try to fetch hudge orders!                                        |
+| offset            | integer            | 0~n                             | Required | used for pagenation offset                                                                   |
+| sku               | string             | BASIC_KIT                       | Optional | search specfield product orders via single sku                                               |
+| sponsorId         | integer            | 1435250601                      | Optional | search concrete sponsors orders. cannot search with external distributor id (TSA number etc) |
+| productName       | url encoded string | BUSINESS+KIT                    | Optional | search specfield product orders via single product name                                      |
+| orderDateStart    | url encoded string | 2024-01-01T00%3A00%3A00-06%3A00 | Optional | query orders by date range                                                                   |
+| orderDateEnd      | url encoded string | 2024-01-02T23%3A59%3A59-06%3A00 | Optional | query orders by date range                                                                   |
+| transactionNumber | string             | 9071832983                      | Optional | search order by payment transaction ID                                                       |
 
 Responses
 
