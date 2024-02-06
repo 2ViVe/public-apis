@@ -23,16 +23,28 @@ Headers
 
 Params
 
-| param         | type               | value               | required | comment                                               |
-| ------------- | ------------------ | ------------------- | -------- | ----------------------------------------------------- |
-| limit         | integer            | 1~100               | Required | used for pagenation. donot try to fetch hudge orders! |
-| offset        | integer            | 0~n                 | Required | used for pagenation offset                            |
-| distributorId | integer            | 1451957701          | Optional | search by distributor id                              |
-| login         | string             | usd01262            | Optional | search by users login                                 |
-| sponsorId     | integer            | 1007799401          | Optional | search by sponsor id                                  |
-| email         | url encoded string | usd01262%40test.com | Optional | search by users email                                 |
-| statusCode    | integer            | 1                   | Optional | search by user status code                            |
-| rankCode      | integer            | 0                   | Optional | search by lifetime rank code                          |
+| param            | type               | value               | required | comment                                                     |
+| ---------------- | ------------------ | ------------------- | -------- | ----------------------------------------------------------- |
+| limit            | integer            | 1~100               | Required | used for pagenation. donot try to fetch hudge orders!       |
+| offset           | integer            | 0~n                 | Required | used for pagenation offset                                  |
+| distributorId    | integer            | 1451957701          | Optional | search by distributor id                                    |
+| login            | string             | usd01262            | Optional | search by users login                                       |
+| sponsorId        | integer            | 1007799401          | Optional | search by sponsor id                                        |
+| email            | url encoded string | usd01262%40test.com | Optional | search by users email                                       |
+| statusCode       | integer            | 1                   | Optional | search by user status code                                  |
+| rankCode         | integer            | 0                   | Optional | search by lifetime rank code                                |
+| firstName        | url encoded string | Testing             | Optional | search by rep firstname                                     |
+| lastName         | url encoded string | QA                  | Optional | search by rep lastname                                      |
+| phone            | integer            | 8888888888          | Optional | search by phone number                                      |
+| taxNumber        | integer            | 888888888           | Optional | search by tax numer                                         |
+| sponsorFirstName | url encoded string | usd                 | Optional | search by sponsors firstname                                |
+| sponsorLastName  | url encoded string | usr                 | Optional | searchby sponsors lastname                                  |
+| city             | url encoded string | Los+Angeles         | Optional | search by city                                              |
+| zipcode          | url encoded string | 90007               | Optional | search by zipcode                                           |
+| countryId        | integer            | 1214                | Optional | search by country id. country id can fetch by countries api |
+| stateId          | integer            | 10018               | Optional | search by state id. country id can fetch by countries api   |
+| roleCode         | string             | D \| R              | Optional | search by role code.                                        |
+| sku              | url encoded string | BASIC_KIT           | Optional | search by order sku                                         |
 
 User status code defintion
 
@@ -140,5 +152,4 @@ Response
     }
   ]
 }
-
 ```
